@@ -65,9 +65,10 @@ def main():
 			print("Have a good day.")
 			exit(0)
 		elif user_input_string.strip() == 'reverse':
-			print("Reversed list:", get_reversed_list(user_input_string))
+			print("List:", user_list)
+			print("Reversed list:", get_reversed_list(user_list))
 		else:
-			user_input_string.append(user_input_string)
+			user_list.append(user_input_string)
 
 
 if __name__ == '__main__':
