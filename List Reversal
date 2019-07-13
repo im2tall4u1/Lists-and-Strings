@@ -1,0 +1,8 @@
+the_list = [1,2,3,4,5,6,7,8,9,10,20,30,40,50]
+#the_list.reverse()
+#print(the_list)
+
+n = []
+for x in the_list:
+    n.insert(0, x)
+print(n)
