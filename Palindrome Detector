@@ -1,0 +1,35 @@
+"""
+Author:	Trent Williams
+File:	Palindrome_Detector.py
+Description:	This program allows the user to enter a word of their choosing
+                            and detects whether or not said word is a palindrome.
+				Example:	If the user enters: hannah,
+							Then the program will output: hannah is a palindrome.
+"""
+
+print("This program will detect whether or not the word you enter is a palindrome.")
+
+def palindrome(str):
+    palindrome = input("palindrome: ")
+    if palindrome == ''.join(reversed(palindrome)):
+            print("This is a palindrome.")
+
+def main():
+    print("Exit the program by typing \"quit\" (without quotes).\n"
+          "Enter a word in order to display if it is a palindrome")
+
+    # Allow the user to enter a word.
+    while True:
+        palindrome = input("Enter a word that is a palindrome: ")
+        if palindrome == 'quit':
+            print("Have a good day.")
+            exit(0)
+        elif palindrome == ''.join(reversed(palindrome)):
+            print("This is a palindrome!")
+        elif palindrome != ''.join(reversed(palindrome)):
+            print("This is not a palindrome.")
+
+
+
+if __name__ == '__main__':
+    main()
