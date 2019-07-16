@@ -1,0 +1,8 @@
+my_list = [10,12,13,14,151,61,73,26,853,23]
+
+n = int(input("Enter an integer to see if it is in the list: "))
+
+if n in my_list:
+    print("Element is in list.")
+else:
+    print("Element is not in list.")
