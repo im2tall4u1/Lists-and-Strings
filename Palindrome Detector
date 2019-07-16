@@ -9,11 +9,6 @@ Description:	This program allows the user to enter a word of their choosing
 
 print("This program will detect whether or not the word you enter is a palindrome.")
 
-def palindrome(str):
-    palindrome = input("palindrome: ")
-    if palindrome == ''.join(reversed(palindrome)):
-            print("This is a palindrome.")
-
 def main():
     print("Exit the program by typing \"quit\" (without quotes).\n"
           "Enter a word in order to display if it is a palindrome")
