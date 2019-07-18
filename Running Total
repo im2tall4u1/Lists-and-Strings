@@ -1,2 +1,34 @@
 my_list = [1,2,3,4,5,6,7,8,9,10,20,30,40,50]
 print(sum(my_list))
+
+######### INPUT AND OUTPUTS ########
+
+def running_total(list_given_by_user):
+    return (sum(list_given_by_user))
+
+#my_list = [1,2,3,4,5,6,7,8,9,10,20,30,40,50]
+#print(sum(my_list))
+
+def main():
+    print("Exit the program by typing \"quit\" (without quotes).\n"
+          "Enter \"sum\" (without quotes) in order to display the running total of the list.")
+    user_list = []
+
+    # Allow the user to keep  entering string values into a list.
+    # The can then display the sum of the list, or exit the program.
+    while True:
+        user_input_string = input("Enter an integer to append to the list: ")
+        if user_input_string == 'quit':
+            print("Have a good day.")
+            exit(0)
+        elif user_input_string == 'sum':
+            print("List:", user_list)
+            for i in range(0, len(user_list)):
+                user_list[i] = int(user_list[i])
+            running_total(user_list)
+        else:
+            user_list.append(user_input_string)
+
+
+if __name__ == '__main__':
+    main()
