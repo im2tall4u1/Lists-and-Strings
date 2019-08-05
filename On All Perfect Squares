@@ -1,0 +1,44 @@
+"""
+Description: This program will calculate the perfect squares in the list given by a user. It uses the map
+                function to pass a function to an iterable as an argument.
+"""
+
+def perf_square(n):
+    x = n // 2
+    y = set([x])
+    while x * x != n:
+        x = (x+(n // x)) // 2
+        if x in y:
+            return False
+        y.add(x)
+    return True
+
+
+def running_total(list_given_by_user):
+    return (sum(list_given_by_user))
+
+#my_list = [1,2,3,4,5,6,7,8,9,10,20,30,40,50]
+#print(sum(my_list))
+
+def main():
+    print("Exit the program by typing \"quit\" (without quotes).\n"
+          "Enter \"square\" (without quotes) in order to display the perfect squares of the list.")
+    user_list = []
+
+    # Allow the user to keep  entering string values into a list.
+    # The can then display the perfect squares of the list, or exit the program.
+    while True:
+        user_input_string = input("Enter an integer to append to the list: ")
+        if user_input_string == 'quit':
+            print("Have a good day.")
+            exit(0)
+        elif user_input_string == 'square':
+            user_list = [int(i) for i in user_list]
+            print("List:", user_list)
+            print("Perfect Squares:", list(map(perf_square, user_list)))
+        else:
+            user_list.append(user_input_string)
+
+
+if __name__ == '__main__':
+    main()
