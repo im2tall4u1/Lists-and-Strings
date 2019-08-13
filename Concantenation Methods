@@ -1,0 +1,24 @@
+my_arr1 = [1,2,3,4,5]
+my_arr2 = ['a','b','c','d','e']
+
+def concantenate():
+    print(my_arr1 + my_arr2)
+
+concantenate()
+
+def alt_concantenation():
+    new_arr = []
+    for x in my_arr1:
+        new_arr.append(x)
+    for x in my_arr2:
+        new_arr.append(x)
+    print(new_arr)
+
+alt_concantenation()
+
+def alternate_elements_concantenation():
+    new_arr = []
+    for x in my_arr1:
+        new_arr.append(x)
+    for x in my_arr2:
+        new_arr.append(x)
