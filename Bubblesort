@@ -1,0 +1,12 @@
+arr = [-17, 12, 4, 92, -8, -104, 1, 0]
+
+def sort(arr):
+    for x in range(len(arr)-1, 0, -1):
+        for i in range(x):
+            if arr[i] > arr[i+1]:
+                z = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = z
+
+sort(arr)
+print(arr)
