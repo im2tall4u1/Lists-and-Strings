@@ -1,1 +1,17 @@
+arr1 = [1,4,6,8]
+arr2 = [2,3,5,7]
+new_arr = []
 
+while arr1 and arr2:
+    if arr1[0] == arr2[0]:
+        new_arr.append(arr1.pop(0))
+        arr2.pop(0)
+    elif arr1[0] < arr2[0]:
+        new_arr.append(arr1.pop(0))
+    else:
+        new_arr.append(arr2.pop(0))
+if arr1:
+    new_arr.extend(arr1)
+if arr2:
+    new_arr.extend(arr2)
+print(new_arr)
